@@ -1,0 +1,42 @@
+#table tr td {
+    border: 1px solid #000;
+    padding: 10px;
+
+}
+
+
+.counter div {
+    cursor: pointer;
+    user-select: none;
+}
+
+.counter {
+    display: flex;
+    justify-content: center;
+}
+
+
+.counter_minus, .counter_plus  {
+    border: 1px solid gray;
+    width: 30px;
+
+}
+
+.counter_minus {
+    border-right: none;
+    text-align: center;
+}
+
+.counter_plus {
+    border-left: none;
+    text-align: center;
+    padding-top: 2px;
+}
+
+
+.counter span input {
+    text-align: center;
+    width: 30px;
+    height: 27px;
+    outline: none;
+}
