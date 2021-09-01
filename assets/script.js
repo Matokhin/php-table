@@ -15,25 +15,25 @@ $(document).ready(function() {
         });
 
     var i = $(".counter_input").val();
-    $(".counter div:first-child").click(function(){
-        $.ajax({
-            url: '/sql_quantity.php',
-            type: 'POST',
-            data: {increment: true},
-            success: function() { }
-        });
+    $(".counter_minus").click(function(){
+        // $.ajax({
+        //     url: '/sql_quantity.php',
+        //     type: 'POST',
+        //     data: {increment: true},
+        //     success: function() { }
+        // });
         if (i <= 1) {return;};
-        $(".counter_input").val(--i);
+        $(this).siblings(".counter_input").val(--i);
 
     });
-    $(".counter div:last-child").click(function(){
-        $.ajax({
-            url: '/sql_quantity.php',
-            type: 'POST',
-            data: {increment: true},
-            success: function() {}
-        });
-        $(".counter_input").val(++i);
+    $(".counter_plus").click(function(){
+        // $.ajax({
+        //     url: '/sql_quantity.php',
+        //     type: 'POST',
+        //     data: {increment: true},
+        //     success: function() {}
+        // });
+        $(this).siblings(".counter_input").val(++i);
     });
 
 });

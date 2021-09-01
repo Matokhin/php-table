@@ -11,7 +11,7 @@ require_once "function.php";
 <body>
     <table id="table">
         <?
-        $items = Products(2);
+        $items = Products(3);
          if(!empty($items)):
         foreach($items as $key => $item): ?>
             <? if ($item['IS_HIDE'] == 'hide') {continue;} ?>
@@ -23,7 +23,7 @@ require_once "function.php";
                     <td><?= substr($item['PRODUCT_ARTICLE'], 0, 30).'...' ; ?></td>
                     <td><div class="counter">
                             <div class="counter_minus">-</div>
-                            <span><input class="counter_input" type="text" value="<?= $item['PRODUCT_QUANTITY']; ?>"></span>
+                            <input class="counter_input" type="text" value="<?= $item['PRODUCT_QUANTITY']; ?>">
                             <div class="counter_plus"><span>+</span></div>
                         </div></td>
                     <td><?= $item['DATE_CREATE']; ?></td>

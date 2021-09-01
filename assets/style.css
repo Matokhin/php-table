@@ -4,7 +4,6 @@
 
 }
 
-
 .counter div {
     cursor: pointer;
     user-select: none;
@@ -34,7 +33,7 @@
 }
 
 
-.counter span input {
+.counter_input {
     text-align: center;
     width: 30px;
     height: 27px;
