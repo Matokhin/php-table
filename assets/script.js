@@ -15,24 +15,11 @@ $(document).ready(function() {
 
     var i = $(".counter_input").val();
     $(".counter_minus").click(function(){
-        $.ajax({
-            url: '/sql_quantity.php',
-            type: 'POST',
-            data: {increment: true},
-            success: function() {console.log('test');}
-            success: function() {console.log('test');}
-        });
         if (i <= 1) {return;};
         $(this).siblings(".counter_input").val(--i);
 
     });
     $(".counter_plus").click(function(){
-        $.ajax({
-            url: '/sql_quantity.php',
-            type: 'POST',
-            data: {increment: true},
-            success: function() {console.log('test');}
-        });
         $(this).siblings(".counter_input").val(++i);
     });
 
