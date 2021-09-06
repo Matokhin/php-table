@@ -1,6 +1,6 @@
 <?
 
-function Products($count = 1) {
+function Products($count) {
     $mysqli = new Mysqli('localhost', 'root', '', 'test');
 
 

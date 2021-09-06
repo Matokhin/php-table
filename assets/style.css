@@ -18,6 +18,8 @@
 .counter_minus, .counter_plus  {
     border: 1px solid gray;
     width: 30px;
+    cursor: pointer;
+    user-select: none;
 
 }
 
