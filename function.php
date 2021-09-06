@@ -7,13 +7,21 @@ function Products($count) {
 
     $query = $mysqli->query('SELECT * FROM `Products` ORDER BY `DATE_CREATE` DESC');
     $items = [];
-
-    for($i = $count - 1; ($row = $query->fetch_assoc());) {
+    while(($row = $query->fetch_assoc())) {
         $items[] = $row;
-        if($i < count($items)) break;
-        $i++;
     }
-    return $items;
+
+    $items_result = [];
+    $query = $mysqli->query('SELECT * FROM `Products` ORDER BY `DATE_CREATE` DESC');
+    for($i = 1;($items = $query->fetch_assoc()); $i++) {
+
+        $items_result[] = $items;
+        if($i >= $count) {
+            break;
+        }
+    }
+
+    return $items_result;
 }
 
 ?>
