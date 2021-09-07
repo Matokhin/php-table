@@ -11,7 +11,7 @@ require_once "function.php";
 <body>
     <table id="table">
         <?
-        $items = Products(3);
+        $items = Products(4);
          if(!empty($items)):
         foreach($items as $key => $item): ?>
 

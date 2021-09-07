@@ -21,11 +21,10 @@ $(document).ready(function() {
         id_minus = $(input).attr('data-id');
         if (i <= 1) {return;};
         $(input).val(--i);
-        var count_minus = $(input).attr('value');
         $.ajax({
             url:'/sql_quantity.php',
             type:'POST',
-            data: {count: count_minus, id_minus: id_minus},
+            data: {id_minus: id_minus},
             success: function() {}
         });
 
@@ -38,13 +37,13 @@ $(document).ready(function() {
         var i = $(input).val();
         id_plus = $(input).attr('data-id');
         $(input).val(++i);
-        var count_plus = $(input).attr('value');
         $.ajax({
             url:'/sql_quantity.php',
             type: 'POST',
-            data:  {count: count_plus, id_plus: id_plus},
+            data:  {id_plus: id_plus},
             success: function() {}
         });
+
 
 
     });
